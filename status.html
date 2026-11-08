@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1200">
+  <title>Check Status | Alvarez Academy Crest</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="status" class="page">
+  <div class="header">
+    <img src="Alvarez%20Academy%20Crest%20Logo.png" alt="Logo" class="logo">
+    <div class="school-name">Alvarez Academy Crest<br><small>Senior High School</small></div>
+    <div class="nav">
+      <a href="index.html">Home</a>
+      <a href="enrollment.html">Enroll</a>
+      <a href="status.html" class="active">Check Status</a>
+    </div>
+  </div>
+
+  <div class="content small-content">
+    <form id="statusForm" class="box">
+      <h2>Check Application Status</h2>
+      <label>Reference Number</label>
+      <input id="reference" placeholder="AAC-SHS-2026-0001">
+      <p id="message" class="message"></p>
+      <button class="navy">Check Status</button>
+    </form>
+
+    <div id="result" class="box" style="display: none;"></div>
+  </div>
+
+  <div class="footer">&copy; Alvarez Academy Crest - Senior High School</div>
+  <script src="js/script.js"></script>
+</body>
+</html>
