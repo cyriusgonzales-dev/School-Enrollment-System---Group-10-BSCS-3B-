@@ -4,7 +4,7 @@ const fs = require("fs");
 
 const app = express();
 const PORT = 3000;
-const DATA_FILE = __dirname + "/data/enrollments.json";
+const DATA_FILE = __dirname + "/data/enrollment.json";
 
 // ----- Settings -----
 const ACTIVE_SEMESTER = "First Semester"; // change to "Second Semester" when needed
@@ -229,6 +229,19 @@ function validate(data) {
 
 app.use(express.json());
 app.use(express.static(__dirname + "/public"));
+app.use("/css", express.static(__dirname + "/css"));
+
+app.get("/enrollment.html", function (req, res) {
+  res.sendFile(__dirname + "/enrollment.html");
+});
+
+app.get("/status.html", function (req, res) {
+  res.sendFile(__dirname + "/status.html");
+});
+
+app.get("/logo.png", function (req, res) {
+  res.sendFile(__dirname + "/Alvarez Academy Crest Logo.png");
+});
 
 // ----- API routes -----
 
